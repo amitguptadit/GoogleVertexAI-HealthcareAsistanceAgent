@@ -16,10 +16,11 @@ def main():
 
 
 def get_access_token():
-    # First Authenticate
+    # First Authenticate by downloading google json file and put into src location path
+    # and also give googleapis cloud-plateform auth url
     credentials = service_account.Credentials.from_service_account_file(
-        "nodal-skein-424404-i2-2769b500b83e.json",
-        scopes=["https://www.googleapis.com/auth/cloud-plateform/"]
+        "google account Authenticate filename",
+        scopes=["googleapis cloud-plateform auth url"]
     )
     credentials.refresh(google.auth.transport.requests.Request())
     return credentials.token
